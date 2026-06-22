@@ -32,7 +32,7 @@ const jogadores = [
 {
     nome: "Felipe Souza",
     pontos: 300000,
-    imagem: "images/FelipeSouza.jpg"
+    imagem: "images/FelipeSouza.png"
 },
 {
     nome: "Tixa",
