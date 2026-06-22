@@ -17,7 +17,7 @@ const jogadores = [
 {
     nome: "Matheus Japa",
     pontos: 900000,
-    imagem: "images/MatheusJapa.jpg"
+    imagem: "images/MatheusJapa.png"
 },
 {
     nome: "Lucão",
