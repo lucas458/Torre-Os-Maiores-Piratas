@@ -1,24 +1,64 @@
 const jogadores = [
     {
-        nome: "Luffy",
-        pontos: 1500,
-        imagem: "images/luffy.jpg"
-    },
-    {
-        nome: "Zoro",
-        pontos: 1200,
-        imagem: "images/zoro.jpg"
-    },
-    {
-        nome: "Nami",
-        pontos: 1000,
-        imagem: "images/nami.jpg"
-    },
-    {
-        nome: "Exemplo",
-        pontos: 100000000,
-        imagem: "images/Tixa.jpg"
-    }
+    nome: "Edinho",
+    pontos: 500000,
+    imagem: "images/Edinho.jpg"
+},
+{
+    nome: "Patrão",
+    pontos: 300000,
+    imagem: "images/Patrao.jpg"
+},
+{
+    nome: "Arthur Max",
+    pontos: 200000,
+    imagem: "images/ArthurMax.jpg"
+},
+{
+    nome: "Matheus Japa",
+    pontos: 900000,
+    imagem: "images/MatheusJapa.jpg"
+},
+{
+    nome: "Lucão",
+    pontos: 300000,
+    imagem: "images/Lucao.jpg"
+},
+{
+    nome: "Guedes",
+    pontos: 200000,
+    imagem: "images/Guedes.jpg"
+},
+{
+    nome: "Felipe Souza",
+    pontos: 300000,
+    imagem: "images/FelipeSouza.jpg"
+},
+{
+    nome: "Tixa",
+    pontos: 100000,
+    imagem: "images/Tixa.jpg"
+},
+{
+    nome: "Luciano",
+    pontos: 1500000,
+    imagem: "images/Luciano.jpg"
+},
+{
+    nome: "Gustavo",
+    pontos: 300000,
+    imagem: "images/Gustavo.jpg"
+},
+{
+    nome: "Pedro Coelho",
+    pontos: 200000,
+    imagem: "images/PedroCoelho.jpg"
+},
+{
+    nome: "Mark",
+    pontos: 700000,
+    imagem: "images/Mark.jpg"
+},
 ];
 
 // Eventos
