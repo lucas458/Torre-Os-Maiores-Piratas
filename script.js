@@ -2,7 +2,7 @@ const jogadores = [
     {
     nome: "Edinho",
     pontos: 500000,
-    imagem: "images/Edinho.jpg"
+    imagem: "images/Edinho.png"
 },
 {
     nome: "Patrão",
@@ -42,7 +42,7 @@ const jogadores = [
 {
     nome: "Luciano",
     pontos: 1500000,
-    imagem: "images/Luciano.jpg"
+    imagem: "images/Luciano.png"
 },
 {
     nome: "Gustavo",
