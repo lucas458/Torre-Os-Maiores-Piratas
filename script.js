@@ -1,5 +1,5 @@
 const jogadores = [
-    {
+{
     nome: "Edinho",
     pontos: 500000,
     imagem: "images/Edinho.png"
