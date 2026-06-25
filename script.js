@@ -117,7 +117,7 @@ function exibirRankingFiltrado() {
                 <div class="rank-number">#${index + 1}</div>
             </div>
 
-            <div class="poster-container">
+            <div class="poster-container" onclick="openModal('${jogador.imagem}', '${jogador.nome}')" style="cursor: pointer;">
                 <img
                     class="poster"
                     src="${jogador.imagem}"
@@ -161,5 +161,44 @@ function atualizarEstatisticas() {
     document.getElementById("leaderPoints").textContent =
         ordenados[0].pontos.toLocaleString("pt-BR");
 }
-
 exibirRankingFiltrado();
+
+function openModal(imgSrc, captionText) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const caption = document.getElementById("modalCaption");
+    
+    modal.style.display = "block";
+    // Forçar reflow para ativar animação CSS
+    void modal.offsetWidth;
+    modal.classList.add("show");
+    
+    modalImg.src = imgSrc;
+    caption.textContent = captionText;
+}
+
+function closeModal() {
+    const modal = document.getElementById("imageModal");
+    modal.classList.remove("show");
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 300);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("imageModal");
+    const closeBtn = document.querySelector(".modal-close");
+    
+    if (closeBtn) {
+        closeBtn.onclick = closeModal;
+    }
+    
+    // Fechar ao clicar fora da imagem
+    if (modal) {
+        modal.onclick = function(event) {
+            if (event.target === modal || event.target.classList.contains("modal-body")) {
+                closeModal();
+            }
+        }
+    }
+});
