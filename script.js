@@ -99,12 +99,13 @@ function exibirRankingFiltrado() {
         const li = document.createElement("li");
 
         li.classList.add("player-card");
+        li.style.animationDelay = `${index * 0.05}s`;
 
         if(index === 0) li.classList.add("rank-1");
         if(index === 1) li.classList.add("rank-2");
         if(index === 2) li.classList.add("rank-3");
 
-        let medalha = `#${index + 1}`;
+        let medalha = "";
 
         if(index === 0) medalha = "🥇";
         if(index === 1) medalha = "🥈";
@@ -112,22 +113,31 @@ function exibirRankingFiltrado() {
 
         li.innerHTML = `
             <div class="rank-badge">
-                ${medalha}
+                ${medalha ? `<div class="rank-icon">${medalha}</div>` : ''}
+                <div class="rank-number">#${index + 1}</div>
             </div>
 
-            <img
-                class="poster"
-                src="${jogador.imagem}"
-                alt="${jogador.nome}"
-                loading="lazy"
-            >
+            <div class="poster-container">
+                <img
+                    class="poster"
+                    src="${jogador.imagem}"
+                    alt="${jogador.nome}"
+                    loading="lazy"
+                    onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%2327272a%22/%3E%3Ctext x=%2250%22 y=%2250%22 font-family=%22Arial%22 font-size=%2214%22 fill=%22%23a1a1aa%22 text-anchor=%22middle%22 dy=%22.3em%22%3E?%3C/text%3E%3C/svg%3E'"
+                >
+            </div>
 
             <div class="player-info">
-                <h2>${jogador.nome}</h2>
+                <div class="player-details">
+                    <h2>${jogador.nome}</h2>
 
-                <p>
-                    🏆 ${jogador.pontos.toLocaleString("pt-BR")} pontos
-                </p>
+                    <div class="bounty">
+                        <span class="bounty-label">PONTOS</span>
+                        <span class="bounty-value">${jogador.pontos.toLocaleString("pt-BR")} pts</span>
+                    </div>
+                </div>
+                
+                ${index === 0 ? `<div class="winner-tag">👑 REI DOS PIRATAS</div>` : ''}
             </div>
         `;
 
