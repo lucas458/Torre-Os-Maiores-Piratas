@@ -119,6 +119,7 @@ function exibirRankingFiltrado() {
                 class="poster"
                 src="${jogador.imagem}"
                 alt="${jogador.nome}"
+                loading="lazy"
             >
 
             <div class="player-info">
